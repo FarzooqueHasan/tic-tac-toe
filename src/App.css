@@ -1,29 +1,40 @@
+/* Background and layout */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #e0eafc, #cfdef3);
-  min-height: 100vh;
   margin: 0;
-  padding: 40px 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #dfe9f3, #ffffff);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
+/* Game container */
 .game {
   display: flex;
+  flex-direction: row;
   gap: 40px;
-  background: white;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
+/* Board and status */
 .game-board {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.status {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Board rows and squares */
 .board-row {
   display: flex;
 }
@@ -31,33 +42,43 @@ body {
 .square {
   width: 80px;
   height: 80px;
+  margin: 4px;
   background: #f0f0f0;
-  border: 2px solid #ddd;
+  border: 2px solid #ccc;
   font-size: 2.5rem;
   font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  vertical-align: middle;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.2s;
-  color: #333;
+  transition: background 0.3s ease;
 }
 
 .square:hover {
-  background: #e0e0e0;
+  background-color: #e0e0e0;
 }
 
-.status {
-  margin-bottom: 16px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #2c3e50;
+/* Restart button */
+.restart-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.game-info {
-  padding-top: 5px;
+.restart-btn:hover {
+  background-color: #2980b9;
 }
 
+/* Move list */
 .game-info ol {
   list-style: none;
   padding-left: 0;
@@ -68,16 +89,16 @@ body {
 }
 
 .game-info button {
-  background-color: #3498db;
+  padding: 6px 12px;
+  background-color: #7f8c8d;
   color: white;
-  padding: 8px 12px;
-  font-size: 0.95rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s;
 }
 
 .game-info button:hover {
-  background-color: #2980b9;
+  background-color: #636e72;
 }
